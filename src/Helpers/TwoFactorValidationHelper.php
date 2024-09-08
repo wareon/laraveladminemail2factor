@@ -50,7 +50,11 @@ class TwoFactorValidationHelper
         ]);
 
         if (!empty($admin->email)) {
-            Mail::to($admin->email)->subject('Email Two Factor')->send(AuthEmailTwoFactor::$group . '::email', ['code' => $code]);
+            $to = $admin->email;
+            Mail::send(AuthEmailTwoFactor::$group . '::email', ['code' => $code], function ($message) use($to) {
+                $ret = $message->to($to)->subject('Email Two Factor');
+                //echo $ret->toString();
+            });
         }
 
         return $code;
