@@ -11,9 +11,10 @@
             "email": "wenzongxian@126.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
-        "encore/laravel-admin": "~1.6"
+        "encore/laravel-admin": "~1.5"
     },
     "require-dev": {
 
