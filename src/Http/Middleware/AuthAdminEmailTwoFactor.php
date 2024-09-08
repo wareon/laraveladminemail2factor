@@ -2,7 +2,6 @@
 
 namespace Wareon\LaravelAdminEmail2Factor\Http\Middleware;
 
-use App\Traits\ApiGenericResponse;
 use Closure;
 use Encore\Admin\Auth\Database\Administrator;
 use Illuminate\Http\Request;
@@ -10,7 +9,6 @@ use Wareon\LaravelAdminEmail2Factor\Helpers\TwoFactorValidationHelper;
 
 class AuthAdminEmailTwoFactor
 {
-    use ApiGenericResponse;
 
     public function handle(Request $request, Closure $next)
     {
