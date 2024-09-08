@@ -1,0 +1,33 @@
+{
+    "name": "wareon/laraveladminemail2factor",
+    "description": "Add email based two factor authentication to laravel-admin",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/wareon/laraveladminemail2factor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wareon",
+            "email": "wenzongxian@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Wareon\\LaravelAdminEmail2Factor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wareon\\LaravelAdminEmail2Factor\\AuthAttemptsServiceProvider"
+            ]
+        }
+    }
+}
